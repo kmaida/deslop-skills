@@ -54,6 +54,27 @@ delve / delves / delving, tapestry, landscape (figurative), testament (e.g. "a t
 - "Perfect storm"
 - "The elephant in the room"
 - "Swiss Army knife" (figurative)
+- "What nobody tells you..." / "Here's what nobody tells you"
+- "The part everyone misses"
+- "What most people get wrong"
+- "This is the part most people skip"
+- "What if I told you..."
+- "Plot twist:"
+- "Think about it:"
+- Self-answered rhetorical pairs ("Question? Answer.")
+- "Marks a pivotal moment"
+- "Plays a vital role" / "plays a crucial role"
+- "Solidifies its position"
+- "Stands as a testament"
+- "Experts agree" / "studies show" / "research shows" / "industry reports suggest" / "many argue" / "widely regarded as" (name the source or cut the claim)
+- "Serves as a..." (say what it is or does: "is," "tracks," "stores")
+- "Let that sink in"
+- "Read that again"
+- "Full stop" (as emphasis)
+- "What's your take?"
+- "Curious what others think" / "Curious to hear your thoughts"
+- "Let me know in the comments" / "Drop a comment"
+- "Sound familiar?"
 
 ## Banned Sentence/Paragraph Openers
 
