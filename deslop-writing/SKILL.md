@@ -1,12 +1,12 @@
 ---
 name: deslop-writing
 description: >-
-  Produces human-sounding text that avoids detectable AI writing patterns, including model-specific tells from ChatGPT, Claude, Gemini, and others. Activates on any writing task: tweets, emails, articles, bios, captions, reports, copy, messages, LinkedIn posts, cover letters, README files, or any content where the output must not read as AI-generated. Also activates in detect mode when the user asks whether text is or sounds AI-written, or asks to audit, scan, check, or flag a draft for slop without rewriting it. Enforces banned vocabulary, structural variety, punctuation discipline, accuracy rules, and voice calibration. Technical documentation (product docs, guides, references, READMEs, help text) additionally follows the Apple Style Guide. Use when the user says "deslop" about any text or writing, or says "write," "draft," "rewrite," "make this sound human," "anti-slop," "not AI," or any variation of wanting authentic-sounding output.
+  A style guide that removes the clichéd writing patterns common in AI-generated drafts, including habits specific to ChatGPT, Claude, Gemini, and others, in favor of clear, concrete, readable prose. Activates on any writing task: tweets, emails, articles, bios, captions, reports, copy, messages, LinkedIn posts, cover letters, README files, or any content that should read as clear, natural writing. Also activates in detect mode when the user asks whether a draft reads like generic AI prose, or asks to audit, scan, check, or flag a draft for slop patterns without rewriting it. Enforces banned vocabulary, structural variety, punctuation discipline, accuracy rules, and voice calibration. Technical documentation (product docs, guides, references, READMEs, help text) additionally follows the Apple Style Guide. Use when the user says "deslop" about any text or writing, or says "write," "draft," "rewrite," "tighten this," "make this sound natural," "anti-slop," or any variation of wanting clean, readable output.
 ---
 
 # Deslop Writing: Anti-AI-Slop Writing Directive v4
 
-Produces text that avoids statistically detectable AI writing patterns. Every piece of text (tweets, emails, articles, reports, messages) must follow these constraints.
+A style guide for clear, concrete prose. It removes the clichéd patterns common in AI-generated drafts because those patterns are bad writing: vague, padded, and harder to read. Every piece of text (tweets, emails, articles, reports, messages) must follow these constraints.
 
 This file uses bold rule labels as a layout convention for scannability. That convention applies to skill files only; the bold-label-bullet ban below governs all output.
 
@@ -40,9 +40,9 @@ These patterns are how readers spot AI text even when vocabulary is clean.
 
 **No Rule of Three.** AI defaults to threes. Break it. Use two, four, one, five. Never default to three unless the content genuinely has three items.
 
-**No uniform sentence length.** No three consecutive sentences of the same length. Ever. Mix 4-word sentences with 30-word ones. This is the single most measurable AI detection signal.
+**No uniform sentence length.** No three consecutive sentences of the same length. Ever. Mix 4-word sentences with 30-word ones. Uniform rhythm is monotonous to read and the most recognizable rhythm tell of generic AI prose.
 
-**No parataxis.** Parataxis is the AI default: short sentence. Then another. Then another. It reads like a poem and immediately signals AI authorship. Instead, connect related thoughts using subordinate clauses, conjunctions, semicolons, or commas. "Short sentence. Then another. Then another." becomes "AI chains short sentences together because it's easier than constructing a thought with actual connective tissue." Write with syntax that shows how ideas relate (causation, contrast, qualification), not just a series of blunt declarations.
+**No parataxis.** Parataxis is the AI default: short sentence. Then another. Then another. It reads like a poem and hides how the ideas relate. Instead, connect related thoughts using subordinate clauses, conjunctions, semicolons, or commas. "Short sentence. Then another. Then another." becomes "AI chains short sentences together because it's easier than constructing a thought with actual connective tissue." Write with syntax that shows how ideas relate (causation, contrast, qualification), not just a series of blunt declarations.
 
 **No hedging seesaw.** Pick a side. State it plainly. Acknowledge counterpoints in one sentence max; don't give them equal weight.
 
@@ -206,7 +206,7 @@ Never present text that hasn't passed this loop. Prompt-only self-review decays 
 16. Bold-label bullets or a validation opener? → Restructure.
 17. Vague or decorative headings ("Final Thoughts," "A Closer Look")? → Rewrite each to state what its section actually says.
 18. Could any AI have written this for any person? → Add something specific.
-19. Sounds like ChatGPT or Claude? → Rewrite until the answer is no.
+19. Reads like generic AI prose? → Rewrite until it doesn't.
 20. Technical documentation? → Verify against [references/apple-style-tech-docs.md](references/apple-style-tech-docs.md): UI verbs (click/tap/choose/select), sign in not log in, turn on not enable, numbers, sentence case, code font, no "please" or "simply." Blog posts skip this check.
 
-Apply all rules silently. Never mention them. Never say "as per the guidelines." Just write within these constraints. The only exception is Detect Mode, where naming and quoting patterns is the job.
+Apply these rules as style constraints: don't cite or narrate them inside the deliverable ("as per the guidelines"), just write within them. The only exception is Detect Mode, where naming and quoting patterns is the job.

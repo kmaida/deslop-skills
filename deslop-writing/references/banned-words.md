@@ -1,6 +1,6 @@
 # Banned Words, Phrases, and Openers
 
-These are statistically flagged as AI-generated text markers across multiple studies (Carnegie Mellon 2025, Wikipedia Signs of AI Writing, Buffer 52M post analysis). Never use any of these. Replace with concrete alternatives or restructure the sentence.
+These are statistically overrepresented in AI-generated text across multiple studies (Carnegie Mellon 2025, Wikipedia Signs of AI Writing, Buffer 52M post analysis), and they read as filler: they add words without adding meaning. Never use any of these. Replace with concrete alternatives or restructure the sentence.
 
 ## Banned Vocabulary
 
@@ -139,7 +139,7 @@ genuinely (as intensifier: "genuinely useful," "genuinely hard"), quietly (as pr
 
 AI overuses these, but plenty of humans use them naturally: "simply" and "just" as minimizers, "chances are," "the good news is / the bad news is," "pro tip:", "spoiler:". Keep them when they match the writer's established voice or their writing guide permits them. A writing guide always wins over this list. Treat them as slop only when there's no voice evidence and they're doing filler work.
 
-## Model-Specific First-Word Tells (avoid starting responses with these)
+## Model-Specific First-Word Habits (vary your openers)
 
 ChatGPT tends to start with: "as," "yes," "sure," "here," "in," "to," "creating," "certainly," "title," "the"
 Claude tends to start with: "in," "from," "this," "how," "yes," "title," "according," "the," "based," "here"
