@@ -12,3 +12,5 @@ Here's what nobody tells you: experts agree this marks a pivotal moment. Let tha
 Vocabulary self-syncs. Structural patterns don't. Which is exactly the problem. No keys. No secrets. Just tokens. The result? Faster builds. What's your take?
 
 That's it. That's the whole setup.
+
+Let me be direct: this is genuinely useful under the hood.

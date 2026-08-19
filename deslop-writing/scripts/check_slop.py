@@ -37,7 +37,7 @@ def load_banned(md_path):
     sections = {}
     current = None
     for line in text.splitlines():
-        m = re.match(r"^##\s+(.*)", line)
+        m = re.match(r"^###?\s+(.*)", line)
         if m:
             current = m.group(1).strip()
             sections[current] = []
@@ -48,6 +48,8 @@ def load_banned(md_path):
 
     def parse_vocab(lines):
         blob = " ".join(l for l in lines if l.strip() and not l.startswith("#"))
+        # commas inside parentheticals would shred the item split
+        blob = re.sub(r"\([^)]*\)", lambda m: m.group(0).replace(",", ";"), blob)
         for item in blob.split(","):
             item = item.strip()
             if not item:
