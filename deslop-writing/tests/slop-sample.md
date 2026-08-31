@@ -7,7 +7,7 @@ It's not about tokens. It's about trust. Four things, and two of them are good.
 - **Speed.** Deploys are faster.
 - **Safety.** Tokens are scoped.
 
-Here's what nobody tells you: experts agree this marks a pivotal moment. Let that sink in. Read that again.
+Here's what nobody tells you: experts agree this marks a pivotal moment. The part most people sleep on is distribution. Let that sink in. Read that again.
 
 Vocabulary self-syncs. Structural patterns don't. Which is exactly the problem. No keys. No secrets. Just tokens. The result? Faster builds. What's your take?
 

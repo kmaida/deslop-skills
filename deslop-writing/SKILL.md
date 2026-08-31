@@ -70,6 +70,8 @@ These patterns are how readers spot AI text even when vocabulary is clean.
 
 **No count-teasers.** "Four things, and two of them are good." "Three takeaways, one of which will surprise you." Announcing a count of meta-nouns (things, takeaways, lessons, points) with a graded reveal is listicle bait. State the items. Counting concrete nouns is fine: "we tried four approaches and two of them shipped" is reporting, not staging.
 
+**No cataphoric teasers.** "Here's the part nobody tells you." "Here's what most people get wrong." "The part most people sleep on." A cataphoric teaser points forward at a withheld payoff to manufacture suspense, and it's engagement-bait: the sentence spends its words promising information instead of delivering it. Delete the teaser and state the point. If the point is surprising, it doesn't need an announcer.
+
 **No anaphora chains.** "It means X. It means Y. It means Z." Repeating the same sentence opener for rhetorical build is a Claude habit. Say it once and let the content carry the weight.
 
 **No synonym cycling.** If the clear word is right, repeat it. Rotating terms for the same referent ("the agent reviews... the assistant scores... the tool suggests") reads as style but destroys precision; the reader can't tell if those are one thing or three. In technical writing this is a correctness bug, not just a tell.
@@ -200,7 +202,7 @@ Never present text that hasn't passed this loop. Prompt-only self-review decays 
 10. Longer sentence or word than needed, extra words, or two sentences doing one sentence's work? → Cut or merge.
 11. Qualifiers or intensifiers ("very," "basically," "kind of") that don't change the meaning? → Delete.
 12. Indirect construction ("can be made to," "is able to," "in order to")? → Collapse to the plain verb.
-13. Contrast-punch ("It's not X. It's Y."), anaphora chain, or zoom-out/kicker ending? → State it directly; end on the last concrete point.
+13. Contrast-punch ("It's not X. It's Y."), cataphoric teaser ("Here's the part nobody tells you"), anaphora chain, or zoom-out/kicker ending? → State it directly; end on the last concrete point.
 14. Synonym cycling, superficial -ing analysis, or inanimate agents ("the decision emerged")? → Repeat the clear word, state the concrete consequence, name who acted.
 15. Elided subject or predicate: sentence ends on an auxiliary, "which" fragment, or bare this/that pointing at a prior clause? → Merge into the previous sentence; name the subject only if merging fails.
 16. Bold-label bullets or a validation opener? → Restructure.

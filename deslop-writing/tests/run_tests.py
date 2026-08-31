@@ -35,6 +35,8 @@ required = [
     "banned term: under the hood",
     "contrast-punch",
     "count-teaser",
+    "cataphoric teaser",
+    "banned phrase: The part most people sleep on",
     "negative listing",
     "two-beat kicker",
     "bold-label bullet",

@@ -177,6 +177,13 @@ def run_checks(raw, doc_type, banned_md):
     for m in re.finditer(_num + r"\s+" + _meta + r"\b[^.!?\n]{0,40}?\b(?:and\s+)?" + _num + r"\s+of\s+(?:them|which|those)\b", text, re.IGNORECASE):
         rep.fail("count-teaser (N things, and M of them...)", f'"{m.group(0)[:60]}" line {line_of(text, m.start())}')
 
+    # cataphoric teaser: "Here's the part nobody tells you" / "The part most people sleep on"
+    _lead = r"(?:Here['’]s\s+(?:the\s+(?:part|thing|bit|secret)|what|where|why)|[Tt]he\s+(?:part|thing|bit|secret))"
+    _crowd = r"(?:nobody|no\s+one|most\s+people|everyone|everybody|few\s+people)"
+    _verb = r"(?:tells?|misses|miss(?:es)?|gets?\s+wrong|sleeps?\s+on|skips?|ignores?|overlooks?|talks?\s+about|won['’]t\s+tell)"
+    for m in re.finditer(_lead + r"\b[^.!?\n]{0,50}?\b" + _crowd + r"\s+" + _verb + r"\b", text, re.IGNORECASE):
+        rep.fail("cataphoric teaser (Here's the part nobody tells you...)", f'"{m.group(0)[:60]}" line {line_of(text, m.start())}')
+
     # negative listing: "No X. No Y. Just Z."
     for m in re.finditer(r"\bNo \w[^.!?]{0,40}\.\s+No \w[^.!?]{0,40}\.\s+Just\b", text):
         rep.fail("negative listing (No X. No Y. Just Z.)", f"line {line_of(text, m.start())}")

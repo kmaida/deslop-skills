@@ -54,8 +54,9 @@ delve / delves / delving, tapestry, landscape (figurative), testament (e.g. "a t
 - "Perfect storm"
 - "The elephant in the room"
 - "Swiss Army knife" (figurative)
-- "What nobody tells you..." / "Here's what nobody tells you"
+- "What nobody tells you..." / "Here's what nobody tells you" / "Here's the part nobody tells you"
 - "The part everyone misses"
+- "The part most people sleep on" and similar sleeps-on teasers
 - "What most people get wrong"
 - "This is the part most people skip"
 - "What if I told you..."
