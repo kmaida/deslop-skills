@@ -28,7 +28,7 @@ Load the banned words and phrases list from [references/banned-words.md](referen
 
 **Collapse indirect constructions.** Wordy scaffolding around a plain verb slips past the rules above because every word looks necessary. It isn't. "X can now be made to Y" → "X can Y." "Is able to" / "has the ability to" → "can." "In order to" → "to." "Makes it possible to" → "lets." "Serves to explain" → "explains." Say what the subject does, directly.
 
-**Match length to the job.** The sentence rules above don’t stop a piece from being twice as long as it needs to be, and over-delivering is AI’s most common failure: three examples where one lands, a section that restates another, an answer that outweighs the question. After drafting, cut at the piece level. If a section, example, or paragraph can be deleted without the reader losing anything, delete it.
+**Match length to the job.** The sentence rules above don't stop a piece from being twice as long as it needs to be, and over-delivering is AI's most common failure: three examples where one lands, a section that restates another, an answer that outweighs the question. After drafting, cut at the piece level. If a section, example, or paragraph can be deleted without the reader losing anything, delete it.
 
 **Repair by restructuring, not padding.** When any rule in this skill flags a sentence, rewrite the thought; don't insert words to silence the rule. A fix that adds words without adding information means the structure was wrong, so merge, cut, or restate in one plain sentence instead. The brevity rules apply to every repair.
 
@@ -88,6 +88,8 @@ These patterns are how readers spot AI text even when vocabulary is clean.
 
 ## Punctuation Rules
 
+**Straight quotes only:** Always use straight double quotes (`"`) and straight single quotes/apostrophes (`'`). Never use curly or smart quotes, including in contractions and possessives.
+
 **Em dashes:** No em dashes, ever. The single most cited AI tell in existence. Use commas, semicolons, colons, parentheses, rephrasing, contractions, or new sentences instead. Never substitute a spaced hyphen or spaced en dash ("the STS - not the agent - holds the key"); mechanical dash-swapping is its own emerging tell, and the sentence should be restructured instead.
 
 **Exclamation marks:** Maximum one per 1,000 words. Enthusiasm comes from word choice.
@@ -144,7 +146,7 @@ These patterns are how readers spot AI text even when vocabulary is clean.
 
 **No hashtag stacks.** Zero to two, integrated naturally.
 
-**No engagement-bait closers.** "What’s your take?", "Curious what others think," "Let me know in the comments," "Drop a comment below." Ending a post by soliciting replies is the loudest social-platform tell. End on the last concrete point; readers who want to reply will reply.
+**No engagement-bait closers.** "What's your take?", "Curious what others think," "Let me know in the comments," "Drop a comment below." Ending a post by soliciting replies is the loudest social-platform tell. End on the last concrete point; readers who want to reply will reply.
 
 **No markdown in plain text contexts** (emails, DMs, SMS). Asterisks rendering as symbols is an instant tell.
 
@@ -154,7 +156,7 @@ Technical documentation follows the Apple Style Guide on top of this skill. This
 
 Before writing or editing any technical documentation, load [references/apple-style-tech-docs.md](references/apple-style-tech-docs.md). It carries the high-frequency conventions (UI verbs, numbers, capitalization, code notation, doc structure) and the precedence rules. For any term, capitalization, or usage question it doesn't settle, fetch the live guide at https://support.apple.com/guide/applestyleguide/welcome/web and check the A–Z entry; the live guide is authoritative over the summary. Don't guess on terminology in published docs.
 
-Precedence in tech docs, in order: this skill's hard bans (no em dashes, no banned-list vocabulary) plus any hard rules in the user's writing guide, then Apple Style Guide, then the rest of this skill. One deliberate relaxation: inside procedural content (numbered steps, parameter tables, reference entries), the structural-variety rules yield to consistency. Steps should be parallel and predictable; keep the variety rules for conceptual prose around them.
+Precedence in tech docs, in order: this skill's hard bans (no em dashes, no curly quotes, no banned-list vocabulary) plus any hard rules in the user's writing guide, then Apple Style Guide, then the rest of this skill. One deliberate relaxation: inside procedural content (numbered steps, parameter tables, reference entries), the structural-variety rules yield to consistency. Steps should be parallel and predictable; keep the variety rules for conceptual prose around them.
 
 ## Voice Calibration
 
@@ -195,7 +197,7 @@ Never present text that hasn't passed this loop. Prompt-only self-review decays 
 3. Parataxis (three or more short declarative sentences in a row)? → Merge or connect them with conjunctions, clauses, or punctuation.
 4. Grouped in threes? → Break the pattern.
 5. Hedging instead of committing, or hedge-stack words ("arguably," "in many ways," "to some extent")? → Pick a side.
-6. Any em dashes? → Remove them all.
+6. Any em dashes or curly quotes? → Remove em dashes and replace curly quotes and apostrophes with straight ones.
 7. Passive construction? → Make active.
 8. Every paragraph ends with a transition? → Cut some.
 9. Fabricated any specifics? → Remove or flag as hypothetical.
