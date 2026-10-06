@@ -45,10 +45,20 @@ required = [
     "spaced hyphen",
     "Title Case header",
     "social: no markdown headers",
+    "noun negation",
+    "banned term: carries",
 ]
 for r in required:
     if r not in out:
         failures.append(f"slop-sample missing expected finding: {r}")
+
+# code type: short declaratives are the target, history wording is not
+code, out = run("code-sample.md", "code")
+for r in ['"Previously"', '"For now"']:
+    if "code: history or time-bound wording" not in out or r not in out:
+        failures.append(f"code-sample missing history finding: {r}")
+if "parataxis" in out:
+    failures.append("code-sample: parataxis must not be reported for --type code")
 
 code, out = run("clean-sample.md", "docs")
 if code != 0:

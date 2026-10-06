@@ -2,7 +2,7 @@
 """Deterministic slop checker for the deslop-writing skill.
 
 Usage:
-    python3 check_slop.py DRAFT_FILE [--type prose|docs|social|email]
+    python3 check_slop.py DRAFT_FILE [--type prose|docs|social|email|code]
     cat draft.md | python3 check_slop.py - [--type docs]
 
 Exit codes:
@@ -212,8 +212,9 @@ def run_checks(raw, doc_type, banned_md):
             rep.warn("uniform sentence length", f'3 sentences of ~{trio[0]} words near "{sents[i][:50]}..."')
             break  # one report is enough
 
-    # parataxis: 3+ consecutive short declaratives
-    for i in range(len(counts) - 2):
+    # parataxis: 3+ consecutive short declaratives. Code comments and
+    # commit text want short declaratives, so the code type skips it.
+    for i in range(len(counts) - 2 if doc_type != "code" else 0):
         if all(c <= 7 for c in counts[i:i+3]):
             rep.warn("parataxis (3+ short sentences)", f'near "{sents[i][:50]}..."')
             break
@@ -232,6 +233,12 @@ def run_checks(raw, doc_type, banned_md):
     # bare demonstrative subject: This/That/These/Those + verb with no noun attached
     for m in re.finditer(r"(?:^|[.!?]\s+)((?:This|That|These|Those)\s+(?:is|are|was|were|means|matters|works|happens|leads|makes|creates|changes|explains)\b)", text):
         rep.warn("bare demonstrative subject (attach a noun to this/that)", f'"{m.group(1)}" line {line_of(text, m.start(1))}')
+
+    # noun negation: "opens no handle" instead of "does not open a handle"
+    _ok_before = r"(?:has|is|was|does|this|its|as|unless|plus|us|yes)"
+    _ok_after = r"(?:longer|matter|one|more|less|doubt|sense|effect)"
+    for m in re.finditer(r"\b(?!" + _ok_before + r"\b)([a-z]+s)\s+no\s+(?!" + _ok_after + r"\b)[a-z]+", text, re.IGNORECASE):
+        rep.warn("noun negation (negate the verb: does not X)", f'"{m.group(0)}" line {line_of(text, m.start())}')
 
     # spaced hyphen/en dash used as em dash substitute
     for m in re.finditer(r"[a-zA-Z]\s[-\u2013]\s[a-zA-Z]", text):
@@ -270,6 +277,13 @@ def run_checks(raw, doc_type, banned_md):
             for m in re.finditer(pat, text, re.IGNORECASE):
                 rep.fail(rule, f'"{m.group(0)}" line {line_of(text, m.start())}')
 
+    # code-mode extras: comments and commit text describe the current state
+    if doc_type == "code":
+        _history = (r"\b(?:previously|originally|no longer|used to|for now|currently|"
+                    r"was changed|we changed|before this change|the old)\b")
+        for m in re.finditer(_history, text, re.IGNORECASE):
+            rep.warn("code: history or time-bound wording (state the current rule)", f'"{m.group(0)}" line {line_of(text, m.start())}')
+
     # social/email-mode extras
     if doc_type in ("social", "email"):
         for m in re.finditer(r"^#{1,6}[ \t]", text, re.MULTILINE):
@@ -288,7 +302,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("draft", help="path to draft file, or - for stdin")
     ap.add_argument("--type", default="prose",
-                    choices=["prose", "docs", "social", "email", "blog"],
+                    choices=["prose", "docs", "social", "email", "blog", "code"],
                     help="content type; toggles context-specific checks")
     ap.add_argument("--banned", default=None,
                     help="path to banned-words.md (default: ../references/ relative to this script)")
