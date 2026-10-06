@@ -102,7 +102,7 @@ Claude's slop profile differs from ChatGPT's: fewer "delve"-class words, more ma
 
 ### Vocabulary
 
-genuinely (as intensifier: "genuinely useful," "genuinely hard"), quietly (as praise: "quietly one of the best"), "heavy lifting" (figurative: "does a lot of the heavy lifting"), under the hood, through-line, crisp / punchy / tight / clean / elegant (as praise for writing, code, or ideas), sharp (as praise: "a sharp observation"), compelling, resonate / resonates, lands / landed (figurative: "the point lands"), worth noting / worth flagging / worth calling out / worth a look, flag / flagging (meaning "to mention"), tension (as framing: "there's a real tension here"), at scale (filler)
+genuinely (as intensifier: "genuinely useful," "genuinely hard"), quietly (as praise: "quietly one of the best"), "heavy lifting" (figurative: "does a lot of the heavy lifting"), under the hood, through-line, crisp / punchy / tight / clean / elegant (as praise for writing, code, or ideas), sharp (as praise: "a sharp observation"), compelling, resonate / resonates, lands / landed (figurative: "the point lands"), worth noting / worth flagging / worth calling out / worth a look, flag / flagging (meaning "to mention"), tension (as framing: "there's a real tension here"), at scale (filler), carries / carry (figurative: "the header carries the token"), rides in (figurative), yields (figurative), settles (figurative), draws on (figurative), lane (figurative: "the e2e lane")
 
 ### Phrases
 
@@ -134,6 +134,9 @@ genuinely (as intensifier: "genuinely useful," "genuinely hard"), quietly (as pr
 - Anaphora chains ("It means X. It means Y. It means Z.")
 - "A few thoughts:" followed by a numbered list
 - Manufactured candor: announcing honesty or directness instead of just being direct
+- Noun negation: verb + "no" + noun ("opens no iptables handle," "holds no state"). Write "does not open," "does not hold"
+- Antithesis for effect inside a sentence ("what a pod needs to answer, not to originate")
+- A hypothetical actor as the subject ("a reader that walks a source therefore sends...")
 - Self-annotating significance: stating something, then narrating that it was on purpose or that it matters ("X is Y. This is deliberate:", "That's by design."). If the choice matters, give the reason itself; the reader doesn't need to be told a choice was a choice
 
 ## Borderline Patterns (do not ban outright)

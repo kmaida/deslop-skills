@@ -13,4 +13,4 @@ Vocabulary self-syncs. Structural patterns don't. Which is exactly the problem. 
 
 That's it. That's the whole setup.
 
-Let me be direct: this is genuinely useful under the hood.
+Let me be direct: this is genuinely useful under the hood. A refused command line opens no iptables handle, and the header carries the token.
